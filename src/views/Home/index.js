@@ -1,14 +1,14 @@
 import { Button } from 'antd';
-import React, { Component } from 'react'
-import {connect} from 'react-redux'
-import { addTodoList} from '../../store/action/home'
+import { Component } from 'react'
+import { connect } from 'react-redux'
+import { addTodoList } from '../../store/action/home'
 class Home extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     console.log(props)
   }
   render() {
-    const { handleClick,store_home_inputValue} = this.props;
+    const { handleClick, store_home_inputValue } = this.props;
     return (
       <div>
         Home   {store_home_inputValue}
@@ -18,7 +18,7 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = (state,ownProps) => {
+const mapStateToProps = (state, ownProps) => {
   return {
     ...state.store_home
   }
@@ -26,7 +26,7 @@ const mapStateToProps = (state,ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleClick:() => {
+    handleClick: () => {
       const action = addTodoList('3')
       dispatch(action);
     }
