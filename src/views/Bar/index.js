@@ -4,7 +4,7 @@ export class Bar extends Component {
   render() {
     return (
       <div>
-        Bar
+        Barr
       </div>
     )
   }
