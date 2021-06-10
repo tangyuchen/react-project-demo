@@ -39,7 +39,6 @@ class NavLeft extends React.Component {
 				<NavLink to={item.key}>{item.title}</NavLink>
 			</Menu.Item>
 		})
-		console.log(result)
 		return result
 	}
 
